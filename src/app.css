@@ -1,0 +1,61 @@
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 360px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+
+.journal .journal-title{
+	text-align: center;
+	font-size: 100;
+}
+
+.ant-card-head-title{
+	font-size: 30px !important;
+}
+
+
+.ant-menu {
+	background-color: white;
+	color: black;
+}	
+
+.ant-layout-header {
+	background-color:  white;
+}
+
+
+.ant-card-bordered{
+	border-color: white;
+}
+
+.ant-card-head {
+	border-color: white;
+}
+
+
+
+.ant-menu-dark .ant-menu-item, .ant-menu-dark .ant-menu-item-group-title, .ant-menu-dark .ant-menu-item {
+	color: black;
+	border-color: white;
+	border-bottom: 0;
+}
+
+
+
+.ant-menu-dark .ant-menu-item, .ant-menu-dark .ant-menu-item-group-title, .ant-menu-dark .ant-menu-item a {
+	color: black;
+}
+
+.ant-menu-dark.ant-menu-horizontal{
+	border-bottom-color: white;
+}
+
+ .ant-content-layout {
+	background-color: white !important;
+}
