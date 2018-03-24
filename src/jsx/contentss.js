@@ -26,20 +26,20 @@ class Cont extends React.Component {
       data : []
     };
   	// alert(this.props.key1)
-  	// if ( thisDefault != 100){
-  	// 	alert('miracle')
-  	// thisDefault = 1
-  // }
-  // else {
-  // 	alert('here')
-  // 	thisDefault = null}
-  // }
+  	if ( thisDefault != 100){
+  		// alert('miracle')
+  	thisDefault = 1
+  }
+  else {
+  	// alert('here')
+  	thisDefault = null}
+  }
   loadCommentsFromServer =() =>{
     axios.get(this.props.url)
       .then(res => {
-        this.setState({ hungry_rides : res.data[9].hungry_rides ,
-                        food_walks : res.data[9].food_walks,
-                        about : res.data[9].about
+        this.setState({ hungry_rides : res.data[8].hungry_rides ,
+                        food_walks : res.data[8].food_walks,
+                        about : res.data[8].about
                       });
       })
   }
@@ -106,6 +106,7 @@ componentWillUnmount() {
       })
   data = (  <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center'}}>
        {a}
+       <h1 id="coming-soon" style={{ fontSize: 48 }}>More Coming Soon...</h1>
       </div>
       )
   }
