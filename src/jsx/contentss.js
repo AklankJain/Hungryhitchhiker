@@ -63,9 +63,9 @@ componentWillUnmount() {
     var tempData= this.state.data
     console.log('looking at the state data ' + tempData)
     var data = null
-  	if(thisDefault == "about") {
+  	if(thisDefault == "hungry_rides") {
       var a = []
-    var hungry_rides = this.state.about || []
+    var hungry_rides = this.state.hungry_rides || []
     hungry_rides.forEach(function(item, index){
       var temp = (<Card id = "journal-title" title={item.title} extra={<a href="#">More</a>} style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
       <p>{item.content}</p>
@@ -94,9 +94,9 @@ componentWillUnmount() {
       </div>
       )
   }
-  else if(thisDefault == "hungry_rides"){
+  else if(thisDefault == "about"){
     var a = []
-    var about = this.state.hungry_rides || []
+    var about = this.state.about || []
     about.forEach(function(item, index){
       var temp = (<Card id = "journal-title" title={item.title} extra={<a href="#">More</a>} style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
       <p>{item.content}</p>
@@ -106,7 +106,6 @@ componentWillUnmount() {
       })
   data = (  <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center'}}>
        {a}
-       <h1 id="coming-soon" style={{ fontSize: 48 }}>More Coming Soon...</h1>
       </div>
       )
   }

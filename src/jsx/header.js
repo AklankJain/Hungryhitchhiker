@@ -23,7 +23,7 @@ class Head extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stateKeyValue : "hungry_rides"
+      stateKeyValue : "about"
     }
   }
 
