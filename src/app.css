@@ -64,3 +64,12 @@
 h1 .coming-soon{
 	font-size: 24;
 }
+
+#content {
+ width: 480px;
+ margin: 0 auto;
+}
+#editor {
+ border: 1px solid grey;
+ padding: 6px;
+}

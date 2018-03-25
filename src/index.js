@@ -11,6 +11,7 @@ import Cont from './jsx/contentss';
 import 'antd/dist/antd.css';
 import './app.css';
 import Head from './jsx/header';
+import MyEditor from './editor'
 import { Layout, Menu, Breadcrumb, Sider, Dropdown, Icon , Carousel, Card } from 'antd';
 const {  Footer, Content, Header } = Layout;
 
@@ -21,7 +22,8 @@ var connection = require("./connection.js");
 ReactDOM.render(
     <BrowserRouter>
     	<div>
-    	<Route exact path='/' component = {App} />    	
+    	<Route exact path='/' component = {App} />
+    	<Route exact path='/form' component = {MyEditor} />   	
     	</div>
     </BrowserRouter>
 	, 

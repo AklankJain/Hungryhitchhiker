@@ -5,6 +5,7 @@ import Bread from './bread'
 import Slider from './slider'
 import Intro from './intro'
 import axios from 'axios'
+import $ from 'jquery';
 
 import { Layout, Menu, Breadcrumb, Sider, Dropdown, Icon , Carousel, Card } from 'antd';
 const { Header, Content, Footer } = Layout;
@@ -68,9 +69,14 @@ componentWillUnmount() {
     var hungry_rides = this.state.hungry_rides || []
     hungry_rides.forEach(function(item, index){
       var temp = (<Card id = "journal-title" title={item.title} extra={<a href="#">More</a>} style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
-      <p>{item.content}</p>
+      <div className={"content-container" + index}> </div>
       </Card>
       )
+
+      $( document ).ready(function() {
+          $('.content-container' + index).html(item.content)
+      });
+  
       a.push(temp)
       })
      data = (

@@ -23,10 +23,9 @@ class Head extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stateKeyValue : "about"
+      stateKeyValue : "hungry_rides"
     }
   }
-
   handleClick = (e) => {
     console.log(e.key);
     this.setState({
