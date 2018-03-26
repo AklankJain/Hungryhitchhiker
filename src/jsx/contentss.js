@@ -6,6 +6,10 @@ import Slider from './slider'
 import Intro from './intro'
 import axios from 'axios'
 import $ from 'jquery';
+import 'readmore-js';
+import jq from 'readmore-js/node_modules/jquery';
+
+
 
 import { Layout, Menu, Breadcrumb, Sider, Dropdown, Icon , Carousel, Card } from 'antd';
 const { Header, Content, Footer } = Layout;
@@ -75,6 +79,11 @@ componentWillUnmount() {
 
       $( document ).ready(function() {
           $('.content-container' + index).html(item.content)
+
+            jq('.content-container' + index).readmore({
+              speed : 5,
+              maxHeight : 500
+            });
       });
   
       a.push(temp)
