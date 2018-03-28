@@ -45,10 +45,10 @@ class Head extends React.Component {
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={['1']}
-        style={{ lineHeight: '64px' }}
+        style={{ lineHeight: '64px' , fontSize : 16 }}
         onClick={ this.handleClick }>
 
-       	<Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="50px" width="50px" /></Menu.Item>
+       	<Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
         <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
         <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
 
@@ -75,10 +75,10 @@ class Head extends React.Component {
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={['2']}
-        style={{ lineHeight: '64px' }}
+        style={{ lineHeight: '64px' , fontSize : 16}}
         onClick={ this.handleClick }>
 
-        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="50px" width="50px" /></Menu.Item>
+        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
         <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
         <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
         <Menu.Item key="4">
@@ -105,10 +105,10 @@ class Head extends React.Component {
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={['4']}
-        style={{ lineHeight: '64px' }}
+        style={{ lineHeight: '64px' , fontSize : 16}}
         onClick={ this.handleClick }>
 
-        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="50px" width="50px" /></Menu.Item>
+        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
         <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
         <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
         <Menu.Item key="4">
@@ -135,10 +135,10 @@ class Head extends React.Component {
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={['0']}
-        style={{ lineHeight: '64px' }}
+        style={{ lineHeight: '64px', fontSize : 16 }}
         onClick={ this.handleClick }>
 
-        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="50px" width="50px" /></Menu.Item>
+        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
         <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
         <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
         <Menu.Item key="4">
