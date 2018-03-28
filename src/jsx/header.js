@@ -23,7 +23,7 @@ class Head extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stateKeyValue : "hungry_rides"
+      stateKeyValue : "home"
     }
   }
   handleClick = (e) => {
@@ -48,7 +48,7 @@ class Head extends React.Component {
         style={{ lineHeight: '64px' }}
         onClick={ this.handleClick }>
 
-       	<Menu.Item key="image"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="50px" width="50px" /></Menu.Item>
+       	<Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="50px" width="50px" /></Menu.Item>
         <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
         <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
 
@@ -78,7 +78,7 @@ class Head extends React.Component {
         style={{ lineHeight: '64px' }}
         onClick={ this.handleClick }>
 
-        <Menu.Item key="image"><img src = "http://hungryhitchhiker.com/wp-content/uploads/2017/10/cropped-hhh-1.png" height="50px" width="50px" /></Menu.Item>
+        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="50px" width="50px" /></Menu.Item>
         <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
         <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
         <Menu.Item key="4">
@@ -108,7 +108,7 @@ class Head extends React.Component {
         style={{ lineHeight: '64px' }}
         onClick={ this.handleClick }>
 
-        <Menu.Item key="image"><img src = "http://hungryhitchhiker.com/wp-content/uploads/2017/10/cropped-hhh-1.png" height="50px" width="50px" /></Menu.Item>
+        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="50px" width="50px" /></Menu.Item>
         <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
         <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
         <Menu.Item key="4">
@@ -122,7 +122,37 @@ class Head extends React.Component {
 
       </Menu>
     </Header>
-    <Cont key1={"about"}/>
+    <Cont key1={"about"} url= 'https://server-try.herokuapp.com/api/update/' />
+    </div>
+    )
+  }
+  else if(temp == "home"){
+    return(
+    <div>
+    <Header>
+        <div className="logo" />
+        <Menu
+        theme="dark"
+        mode="horizontal"
+        defaultSelectedKeys={['0']}
+        style={{ lineHeight: '64px' }}
+        onClick={ this.handleClick }>
+
+        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="50px" width="50px" /></Menu.Item>
+        <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
+        <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
+        <Menu.Item key="4">
+        <Dropdown overlay={menu}>
+        <a className="ant-dropdown-link" href="#">
+          Services <Icon type="down" />
+        </a>
+      </Dropdown> </Menu.Item>
+        <Menu.Item key="about">About the Story</Menu.Item>
+        <Menu.Item key="6"> Let's Connect </Menu.Item>
+
+      </Menu>
+    </Header>
+    <Cont key1={"home"} url= 'https://server-try.herokuapp.com/api/update/'/>
     </div>
     )
   }

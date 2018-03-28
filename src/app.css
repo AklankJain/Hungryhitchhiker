@@ -56,6 +56,22 @@
 	border-bottom-color: white;
 }
 
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected{
+	background-color: #444444;
+	color: white;
+}
+.ant-menu-dark .ant-menu-item:hover , .ant-menu-dark .ant-menu-item-active{
+	color: grey;
+	background-color: #f0f0f0;
+}
+
+.ant-menu-dark .ant-menu-item:hover > a , .ant-menu-dark .ant-menu-item-active > a {
+	color : grey;
+}
+
+.ant-dropdown-menu-item: hover ,.ant-dropdown-menu-item-active {
+	background-color: #444444;
+}
  .ant-content-layout {
 	background-color: white !important;
 }
@@ -72,4 +88,13 @@ h1 .coming-soon{
 #editor {
  border: 1px solid grey;
  padding: 6px;
+}
+
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 600px;
+  line-height: 600px;
+  background: #364d79;
+  overflow: hidden;
 }

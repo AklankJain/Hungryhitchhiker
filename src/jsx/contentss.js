@@ -72,7 +72,7 @@ componentWillUnmount() {
       var a = []
     var hungry_rides = this.state.hungry_rides || []
     hungry_rides.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title} extra={<a href="#">More</a>} style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
+      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
       <div className={"content-container" + index}> </div>
       </Card>
       )
@@ -98,7 +98,7 @@ componentWillUnmount() {
     var a = []
     var food_walks = this.state.food_walks || []
     food_walks.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title} extra={<a href="#">More</a>} style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
+      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
       <p>{item.content}</p>
       </Card>
       )
@@ -113,7 +113,7 @@ componentWillUnmount() {
     var a = []
     var about = this.state.about || []
     about.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title} extra={<a href="#">More</a>} style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
+      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
       <p>{item.content}</p>
       </Card>
       )
@@ -123,6 +123,35 @@ componentWillUnmount() {
        {a}
       </div>
       )
+  }
+  else if(thisDefault == "home"){
+    data = (
+    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: 20}}>
+       <Slider />
+       <br />
+       <p>
+       Any man who can hitch the length and breadth of the galaxy, rough it, slum it, struggle against terrible odds and still know where his home is, he is clearly the man to be reckoned with.
+Two years back, I started an unprecedented journey by stepping out from the world of engineering, to fulfill my passion and to justify that I am the maker of my own destiny.
+My destiny is still a work under progress though. :)
+</p>
+<p style={{textAlign : 'left' , fontSize : 18 , paddingLeft : 8}}>
+<b style = {{ fontSize : 20 , paddingLeft: 20}}>I am:</b>
+<ul>
+<li>A food explorer and an aspiring chef.</li>
+<li>I am on an adventurous and expeditious hitchhiking journey called life, to learn as much as I can, in order to educate myself with the voracious knowledge that the world has to provide. </li>
+<li>A believer and preacher of the ideology<i>‘healthy is tasty, if one know how to make it’</i>.</li>
+<li>A dreamer, who hopes to open a restaurant in <b>Jaipur</b> <i>(my hometown)</i> based on my exploration and  experiences.</li>
+</ul>
+</p>
+<br />
+<p>
+To all of you awesome people reading this, I hope you enjoy this journey with me as much as I have. :)
+</p>
+<p style= {{fontSize : 24}}>
+<b>-<a href="https://www.facebook.com/vinayakagr" target = "_blank">Vinayak</a> aka 'HungryHitchhiker'</b>
+</p>
+      </div>
+    )
   }
   else{
     data = (  <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center'}}>
