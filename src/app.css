@@ -98,3 +98,23 @@ h1 .coming-soon{
   background: #364d79;
   overflow: hidden;
 }
+
+#avatar {
+	border-radius: 50%;
+}
+
+.logo{
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+
+#horizontal-list li {
+		display: inline;
+		padding-right: 20px;
+	}
+

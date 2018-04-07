@@ -12,7 +12,6 @@ const RadioGroup = Radio.Group;
 const { TextArea } = Input;
 
 
-
 class RegistrationForm extends React.Component {
   state = {
     autoCompleteResult: [],

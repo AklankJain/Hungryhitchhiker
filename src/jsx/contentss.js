@@ -11,7 +11,7 @@ import jq from 'readmore-js/node_modules/jquery';
 
 
 
-import { Layout, Menu, Breadcrumb, Sider, Dropdown, Icon , Carousel, Card } from 'antd';
+import { Layout, Menu, Breadcrumb, Sider, Dropdown, Icon , Carousel, Card , Avatar} from 'antd';
 const { Header, Content, Footer } = Layout;
 
 function onChange(a, b, c) {
@@ -109,6 +109,30 @@ componentWillUnmount() {
       </div>
       )
   }
+  else if(thisDefault == "contact"){
+    console.log("In contact")
+    data = (
+    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: 20}}>
+      <p>
+      <img  id = "avatar" src= {require('../img/vinayak.jpg')} alt = "Avatar" height = "300px" width = "300px"/>
+      </p>
+      <p>
+      <h1>Vinayak Agarwal</h1>
+      </p>
+      <p>
+      This is Vinyak Agarwal, who is exploring life
+      </p>
+      <p class = "logo" >
+      <ul id = "horizontal-list" class= "social">
+      <li class="trying"><a target = "_blank" href = "https://www.facebook.com/Hungryhitchhiker/?hc_ref=ARSARkj0iuYkY4JfVu3a2r4Y_bxgF08CAlmN9UK0EHFgsPHv-AdAjOkypeBXHU5oGoE"><img src={require('../img/facebook.png')} /></a></li>
+      <li><a target = "_blank" href = "https://www.instagram.com/hungryhitchhiker/"><img src={require('../img/insta.png')} /></a></li>
+      <li><a target = "_blank" href = ""><img src={require('../img/twitter.png')} /></a></li>
+      <li><a  href = "mailto:hungryhitchhiker@gmail.com"><img src={require('../img/email.png')} /></a></li>
+      </ul>
+      </p>    
+    </div>
+          )
+  }
   else if(thisDefault == "about"){
     var a = []
     var about = this.state.about || []
@@ -150,6 +174,60 @@ To all of you awesome people reading this, I hope you enjoy this journey with me
 <p style= {{fontSize : 24}}>
 <b>-<a href="https://www.facebook.com/vinayakagr" target = "_blank">Vinayak</a> aka 'HungryHitchhiker'</b>
 </p>
+      </div>
+    )
+  }
+  
+  else if(thisDefault == "food_services"){
+    data = (
+    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: 20}}>
+      <h1> Food Services </h1>
+      <p>
+      In case you haven't guessed it yet, my journey is not just about traveling but rather also about implementing the things I learn in my own hometown, Jaipur. 
+      Obviously, it will be selfish of me to keep doing all these things and not really offering the food cooked by me to the people out there. 
+      I love cooking food for people! 
+      </p>
+      <p>
+  While currently in beta version I plan to be able to provide a long range of
+   offering to people. From healthy snacks, tiffin services, food to be used during some kind 
+   of workshop, catering, salad bars, pop-up cafe in Jaipur, I aim to experiment with 
+   a lot of things which I personally find exciting. 
+   </p>
+<p>
+  More details will be added on this page very soon</p>
+
+<p>
+Contact me at hungryhitchhiker@gmail.com for the latest update about the same.</p>
+      </div>
+    )
+  }
+  else if(thisDefault == "hungry_walks"){
+    data = (
+    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: 20}}>
+      <h1> Hungry Walks </h1>
+      <p>
+      Do you share the same love for street food like me?
+       In my hometown Jaipur (India) there are street food shops that
+        have been serving the taste buds of people in the city for generations now.
+         It is an overt fact that nobody can compete with the food they serve with 
+         their secret recipes. Today, with urbanisation deepening its roots in the cities,
+          the new generation is forgetting about these places. Also, someone who is visiting a
+           city from outside as a tourist will not be able to find or know about these shops
+            and most probably end up eating at some fancy restaurant with the corrupted version
+             of the dish. As the HungryHitchhiker, I wish to learn from the enlightened and pass 
+             it to the seeker, so as to bridge the gap between them.
+      </p><p>
+Come on a food tour with me to the joyful pink city and savour the taste of 
+street food in the way I prefer. Be it an exploration tour for finding more such shops 
+or just tasting the best street food of the city. The foodwalks that are being planned
+ throughout the year under the name Hungrywalks will be conducted by me and my foodwalk 
+ partner Atray. If you are a true foodie and want to be a wayfarer, you should definitely 
+ know about the next foodwalk that is being planned. Not a localite and just visiting the 
+ city/country? Feel free to contact me for a private foodwalk available anytime throughout
+  the year in Jaipur? Ping me for details at hungryhitchhiker@gmail.com.
+
+      </p>
+
       </div>
     )
   }

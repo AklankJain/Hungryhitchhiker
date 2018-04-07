@@ -7,14 +7,17 @@ import temp from './temp/temps';
 import { Layout, Menu, Breadcrumb, Sider, Dropdown, Icon , Carousel, Card } from 'antd';
 const { Header, Content, Footer } = Layout;
 
+var ti = ""
+const onClick = function ({ key }) {
+  console.log(key);
+  ti = key
+  console.log(ti)
+};
+
 const menu = (
-  <Menu>
-    <Menu.Item>
-      <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">Catering</a>
-    </Menu.Item>
-    <Menu.Item>
-      <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">Tiffin Services</a>
-    </Menu.Item>
+  <Menu onClick={onClick}>
+    <Menu.Item key="hungry_walks">Hungry Walks</Menu.Item>
+    <Menu.Item key="food_services">Food Services</Menu.Item>
   </Menu>
 );
 
@@ -28,9 +31,16 @@ class Head extends React.Component {
   }
   handleClick = (e) => {
     console.log(e.key);
+    if(e.key == "hungry_hometown"){
+      this.setState({
+      stateKeyValue : ti
+    })
+    }
+    else{
     this.setState({
       stateKeyValue : e.key
     })
+  }
   }
 
   render(){
@@ -48,18 +58,20 @@ class Head extends React.Component {
         style={{ lineHeight: '64px' , fontSize : 16 }}
         onClick={ this.handleClick }>
 
-       	<Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
+        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
         <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
         <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
 
-        <Menu.Item key="4">
+        <Menu.Item key = "hungry_hometown">
         <Dropdown overlay={menu}>
-    		<a className="ant-dropdown-link" href="#">
-      		Services <Icon type="down" />
-    		</a>
-  		</Dropdown> </Menu.Item>
-        <Menu.Item key="about">About the Story</Menu.Item>
-        <Menu.Item key="6"> Let's Connect </Menu.Item>
+          <a className="ant-dropdown-link" href="#">
+        Hungry @ Hometown <Icon type="down" />
+          </a>
+      </Dropdown>
+      </Menu.Item>
+       
+        <Menu.Item key="contact"> Let's Connect </Menu.Item>
+        <Menu.Item ><a href= "https://www.instagram.com/hungryhitchhiker/" >Gallery </a></Menu.Item>
 
       </Menu>
     </Header>
@@ -81,14 +93,15 @@ class Head extends React.Component {
         <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
         <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
         <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
-        <Menu.Item key="4">
+        <Menu.Item key = "hungry_hometown">
         <Dropdown overlay={menu}>
-        <a className="ant-dropdown-link" href="#">
-          Services <Icon type="down" />
-        </a>
-      </Dropdown> </Menu.Item>
-        <Menu.Item key="about">About the Story</Menu.Item>
-        <Menu.Item key="6"> Let's Connect </Menu.Item>
+          <a className="ant-dropdown-link" href="#">
+        Hungry @ Hometown <Icon type="down" />
+          </a>
+      </Dropdown>
+      </Menu.Item>
+        <Menu.Item key="contact"> Let's Connect </Menu.Item>
+        <Menu.Item ><a href= "https://www.instagram.com/hungryhitchhiker/" >Gallery </a></Menu.Item>
 
       </Menu>
     </Header>
@@ -111,14 +124,16 @@ class Head extends React.Component {
         <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
         <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
         <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
-        <Menu.Item key="4">
+        <Menu.Item key = "hungry_hometown">
         <Dropdown overlay={menu}>
-        <a className="ant-dropdown-link" href="#">
-          Services <Icon type="down" />
-        </a>
-      </Dropdown> </Menu.Item>
-        <Menu.Item key="about">About the Story</Menu.Item>
-        <Menu.Item key="6"> Let's Connect </Menu.Item>
+          <a className="ant-dropdown-link" href="#">
+        Hungry @ Hometown <Icon type="down" />
+          </a>
+      </Dropdown>
+      </Menu.Item>
+       
+       <Menu.Item key="contact"> Let's Connect </Menu.Item>
+        <Menu.Item ><a href= "https://www.instagram.com/hungryhitchhiker/" >Gallery </a></Menu.Item>
 
       </Menu>
     </Header>
@@ -141,18 +156,113 @@ class Head extends React.Component {
         <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
         <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
         <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
-        <Menu.Item key="4">
+        <Menu.Item key = "hungry_hometown">
         <Dropdown overlay={menu}>
-        <a className="ant-dropdown-link" href="#">
-          Services <Icon type="down" />
-        </a>
-      </Dropdown> </Menu.Item>
-        <Menu.Item key="about">About the Story</Menu.Item>
-        <Menu.Item key="6"> Let's Connect </Menu.Item>
+          <a className="ant-dropdown-link" href="#">
+        Hungry @ Hometown <Icon type="down" />
+          </a>
+      </Dropdown>
+      </Menu.Item>
+        <Menu.Item key="contact"> Let's Connect </Menu.Item>
+         <Menu.Item ><a href= "https://www.instagram.com/hungryhitchhiker/" >Gallery </a></Menu.Item>
 
       </Menu>
     </Header>
     <Cont key1={"home"} url= 'https://server-try.herokuapp.com/api/update/'/>
+    </div>
+    )
+  }
+  else if(temp == "contact"){
+    return(
+    <div>
+    <Header>
+        <div className="logo" />
+        <Menu
+        theme="dark"
+        mode="horizontal"
+        defaultSelectedKeys={['0']}
+        style={{ lineHeight: '64px', fontSize : 16 }}
+        onClick={ this.handleClick }>
+
+        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
+        <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
+        <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
+        <Menu.Item key = "hungry_hometown">
+        <Dropdown overlay={menu}>
+          <a className="ant-dropdown-link" href="#">
+        Hungry @ Hometown <Icon type="down" />
+          </a>
+      </Dropdown>
+      </Menu.Item>
+        <Menu.Item key="food_services"> Let's Connect </Menu.Item>
+         <Menu.Item ><a href= "https://www.instagram.com/hungryhitchhiker/" >Gallery </a></Menu.Item>
+
+      </Menu>
+    </Header>
+    <Cont key1={"contact"} url= 'https://server-try.herokuapp.com/api/update/'/>
+    </div>
+    )
+  }
+  else if(temp == "hungry_walks"){
+    return(
+    <div>
+    <Header>
+        <div className="logo" />
+        <Menu
+        theme="dark"
+        mode="horizontal"
+        defaultSelectedKeys={['0']}
+        style={{ lineHeight: '64px', fontSize : 16 }}
+        onClick={ this.handleClick }>
+
+        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
+        <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
+        <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
+        <Menu.Item key = "hungry_hometown">
+        <Dropdown overlay={menu}>
+          <a className="ant-dropdown-link" href="#">
+        Hungry @ Hometown <Icon type="down" />
+          </a>
+      </Dropdown>
+      </Menu.Item>
+        <Menu.Item key="contact"> Let's Connect </Menu.Item>
+         <Menu.Item ><a href= "https://www.instagram.com/hungryhitchhiker/" >Gallery </a></Menu.Item>
+
+      </Menu>
+    </Header>
+    <Cont key1={"hungry_walks"} url= 'https://server-try.herokuapp.com/api/update/'/>
+    </div>
+    )
+  }
+  else if(temp == "food_services"){
+    return(
+    <div>
+    <Header>
+        <div className="logo" />
+        <Menu
+        theme="dark"
+        mode="horizontal"
+        defaultSelectedKeys={['0']}
+        style={{ lineHeight: '64px', fontSize : 16 }}
+        onClick={ this.handleClick }>
+
+        <Menu.Item key="home"><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
+        <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
+        <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
+        <Menu.Item key = "hungry_hometown">
+        <Dropdown overlay={menu}>
+          <a className="ant-dropdown-link" href="#">
+        Hungry @ Hometown <Icon type="down" />
+          </a>
+      </Dropdown>
+      </Menu.Item>
+       
+        <Menu.Item key="contact"> Let's Connect </Menu.Item>
+        <Menu.Item ><a href= "https://www.instagram.com/hungryhitchhiker/" >Gallery </a></Menu.Item>
+
+      </Menu>
+    </Header>
+    <Cont key1={"food_services"} url= 'https://server-try.herokuapp.com/api/update/'/>
     </div>
     )
   }

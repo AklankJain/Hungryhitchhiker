@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^3.2.2",
+    "aws-sdk": "^2.216.1",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "body-parser": "^1.18.2",

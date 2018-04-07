@@ -13,6 +13,7 @@ import './app.css';
 import Head from './jsx/header';
 import MyEditor from './editor'
 import { Layout, Menu, Breadcrumb, Sider, Dropdown, Icon , Carousel, Card } from 'antd';
+import Picture from './picture-form'
 const {  Footer, Content, Header } = Layout;
 
 var connection = require("./connection.js");
@@ -23,7 +24,8 @@ ReactDOM.render(
     <BrowserRouter>
     	<div>
     	<Route exact path='/' component = {App} />
-    	<Route exact path='/form' component = {MyEditor} />   	
+    	<Route exact path='/form' component = {MyEditor} /> 
+    	<Route exact path='/picture' component = {Picture} />   	
     	</div>
     </BrowserRouter>
 	, 
