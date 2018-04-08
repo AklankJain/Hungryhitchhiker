@@ -76,6 +76,11 @@
 	background-color: white !important;
 }
 
+.ant-menu-dark .ant-menu-item-selected > a, .ant-menu-dark .ant-menu-item-selected > a:hover{
+	color: #fff;
+}
+
+
 
 h1 .coming-soon{
 	font-size: 24;
@@ -118,3 +123,7 @@ h1 .coming-soon{
 		padding-right: 20px;
 	}
 
+.home{
+	background-color: #fff !important;
+
+}

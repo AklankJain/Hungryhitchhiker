@@ -117,10 +117,10 @@ componentWillUnmount() {
       <img  id = "avatar" src= {require('../img/vinayak.jpg')} alt = "Avatar" height = "300px" width = "300px"/>
       </p>
       <p>
-      <h1>Vinayak Agarwal</h1>
+      <h1>Vinayak Agrawal</h1>
       </p>
       <p>
-      This is Vinyak Agarwal, who is exploring life
+      Food is love, love is food.
       </p>
       <p class = "logo" >
       <ul id = "horizontal-list" class= "social">
