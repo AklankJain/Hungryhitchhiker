@@ -124,7 +124,3 @@ h1 .coming-soon{
 	}
 
 
-.loader{position:fixed;
-	left:0;top:0;
-	width:100%;height:100%;z-index:9999;
-	background:url(loader.gif) no-repeat center center #000;opacity: .75;}

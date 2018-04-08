@@ -38,6 +38,7 @@ class Cont extends React.Component {
   else {
   	// alert('here')
   	thisDefault = null}
+   
   }
   loadCommentsFromServer =() =>{
     axios.get(this.props.url)
@@ -54,8 +55,7 @@ componentWillMount() {
 }
 
 componentDidMount() {
-    console.log('conponentMounted')
-    this.loadCommentsFromServer();
+   
   }
 
 componentWillUnmount() {
@@ -180,9 +180,7 @@ To all of you awesome people reading this, I hope you enjoy this journey with me
       </div>
 
     )
- $( window).on('load' , function() {
-          $(".loader").fadeOut("slow");
-      });
+ 
   }
   
   else if(thisDefault == "food_services"){
