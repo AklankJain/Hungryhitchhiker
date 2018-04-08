@@ -38,7 +38,6 @@ class Cont extends React.Component {
   else {
   	// alert('here')
   	thisDefault = null}
-   
   }
   loadCommentsFromServer =() =>{
     axios.get(this.props.url)
@@ -55,7 +54,8 @@ componentWillMount() {
 }
 
 componentDidMount() {
-   
+    console.log('conponentMounted')
+    this.loadCommentsFromServer();
   }
 
 componentWillUnmount() {
@@ -85,8 +85,6 @@ componentWillUnmount() {
               maxHeight : 500
             });
       });
-
-
   
       a.push(temp)
       })
@@ -122,7 +120,7 @@ componentWillUnmount() {
       <h1>Vinayak Agrawal</h1>
       </p>
       <p>
-      Food is love, love is food.
+      Food is love, love is food
       </p>
       <p class = "logo" >
       <ul id = "horizontal-list" class= "social">
@@ -176,11 +174,8 @@ To all of you awesome people reading this, I hope you enjoy this journey with me
 <p style= {{fontSize : 24}}>
 <b>-<a href="https://www.facebook.com/vinayakagr" target = "_blank">Vinayak</a> aka 'HungryHitchhiker'</b>
 </p>
-<p class="loader" ></p>
       </div>
-
     )
- 
   }
   
   else if(thisDefault == "food_services"){
