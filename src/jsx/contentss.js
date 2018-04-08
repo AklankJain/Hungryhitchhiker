@@ -85,6 +85,8 @@ componentWillUnmount() {
               maxHeight : 500
             });
       });
+
+
   
       a.push(temp)
       })
@@ -174,8 +176,13 @@ To all of you awesome people reading this, I hope you enjoy this journey with me
 <p style= {{fontSize : 24}}>
 <b>-<a href="https://www.facebook.com/vinayakagr" target = "_blank">Vinayak</a> aka 'HungryHitchhiker'</b>
 </p>
+<p class="loader" ></p>
       </div>
+
     )
+ $( window).on('load' , function() {
+          $(".loader").fadeOut("slow");
+      });
   }
   
   else if(thisDefault == "food_services"){
