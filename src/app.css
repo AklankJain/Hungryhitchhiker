@@ -10,6 +10,11 @@
   color: #fff;
 }
 
+
+.ant-carousel .slick-slide img {
+	margin: auto;
+}
+
 .journal .journal-title{
 	text-align: center;
 	font-size: 100;
