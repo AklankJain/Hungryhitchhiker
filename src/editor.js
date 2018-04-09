@@ -1,6 +1,8 @@
 
-import React from 'react';
+import React , {Component} from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+import RichTextEditor from 'react-rte';
 import './app.css'
 import axios from 'axios'
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete, Radio } from 'antd';
@@ -11,11 +13,28 @@ const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
 const { TextArea } = Input;
 
-
+var ti = ""
 class RegistrationForm extends React.Component {
-  state = {
-    autoCompleteResult: [],
+  static propTypes = {
+    onChange: PropTypes.func
   };
+  state = {
+    value: RichTextEditor.createEmptyValue()
+  }
+
+  onChange = (value) => {
+    this.setState({value});
+    if (this.props.onChange) {
+      // Send the changes up to the parent component as an HTML string.
+      // This is here to demonstrate using `.toString()` but in a real app it
+      // would be better to avoid generating a string on each change.
+      this.props.onChange(
+         value.toString('html')
+      );
+      console.log(value);
+    }
+  };
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
@@ -23,19 +42,21 @@ class RegistrationForm extends React.Component {
         var key = values.title + values.tags
         console.log(key)
         console.log('Received values of form: ', values);
-      axios.put('https://server-try.herokuapp.com/api/update', {title: values.title,content: values.content,tags: values.tags,key: key})
+        console.log(this.state.value.toString('html'));
+        axios.put('https://server-try.herokuapp.com/api/update', {title: values.title,content: this.state.value.toString('html'),tags: values.tags,key: key})
         .then(response => {
           console.log(response);
             })
           .catch(error => {
              console.log(err);
-            });
+            });      
       }
     });
   }
 
 
   render() {
+    console.log(ti)
     const { getFieldDecorator } = this.props.form;
     const { autoCompleteResult } = this.state;
 
@@ -63,6 +84,11 @@ class RegistrationForm extends React.Component {
     };
 
     return (
+      <div>
+       <RichTextEditor
+        value={this.state.value}
+        onChange={this.onChange}
+      />
       <Form onSubmit={this.handleSubmit}>
         <FormItem
           {...formItemLayout}
@@ -107,6 +133,7 @@ class RegistrationForm extends React.Component {
           <Button type="primary" htmlType="submit">Submit</Button>
         </FormItem>
       </Form>
+      </div>
     );
   }
 }

@@ -1,6 +1,6 @@
 .ant-carousel .slick-slide {
   text-align: center;
-  height: 360px;
+  height: 400px;
   line-height: 160px;
   background: #364d79;
   overflow: hidden;
@@ -98,10 +98,14 @@ h1 .coming-soon{
 
 .ant-carousel .slick-slide {
   text-align: center;
-  height: 600px;
-  line-height: 600px;
+  height: 450px;
+  line-height: 400px;
   background: #364d79;
   overflow: hidden;
+}
+.ant-carousel {
+	width: 80%;
+    margin: auto;
 }
 
 #avatar {

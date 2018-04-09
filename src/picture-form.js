@@ -12,7 +12,7 @@ class Picture extends React.Component {
       <div id = "picture-form">
       <input type="file" id="file-input" />
 <p id="status">Please select a file</p>
-<img id="preview" src={require('./img/one.JPG')} height = "50px"  width= "50px" />
+<img id="preview" src="" height = "50px"  width= "50px" />
 <form onSubmit={this.handleSubmit} >
   <input type="hidden" id="avatar-url" name="avatar-url" value="" />
   <input type="text" name="username" placeholder="Username" /><br/>

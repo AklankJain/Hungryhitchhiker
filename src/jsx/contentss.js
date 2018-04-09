@@ -24,9 +24,9 @@ class Cont extends React.Component {
   constructor(props) {
   	super(props);
   	thisDefault = this.props.key1
-  	console.log('inside constructor')
-  	console.log('hello' + thisDefault)
-    console.log( 'trying multiple props '+ this.props.url)
+  	// console.log('inside constructor')
+  	// console.log('hello' + thisDefault)
+   //  console.log( 'trying multiple props '+ this.props.url)
     this.state = {
       data : []
     };
@@ -114,7 +114,7 @@ componentWillUnmount() {
     data = (
     <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: 20}}>
       <p>
-      <img  id = "avatar" src= {require('../img/vinayak.jpg')} alt = "Avatar" height = "300px" width = "300px"/>
+      <img  id = "avatar" src= "https://s3.ap-south-1.amazonaws.com/hungry-media/img/vinayak.jpg" alt = "Avatar" height = "300px" width = "300px"/>
       </p>
       <p>
       <h1>Vinayak Agrawal</h1>
@@ -124,10 +124,9 @@ componentWillUnmount() {
       </p>
       <p class = "logo" >
       <ul id = "horizontal-list" class= "social">
-      <li class="trying"><a target = "_blank" href = "https://www.facebook.com/Hungryhitchhiker/?hc_ref=ARSARkj0iuYkY4JfVu3a2r4Y_bxgF08CAlmN9UK0EHFgsPHv-AdAjOkypeBXHU5oGoE"><img src={require('../img/facebook.png')} /></a></li>
-      <li><a target = "_blank" href = "https://www.instagram.com/hungryhitchhiker/"><img src={require('../img/insta.png')} /></a></li>
-      <li><a target = "_blank" href = ""><img src={require('../img/twitter.png')} /></a></li>
-      <li><a  href = "mailto:hungryhitchhiker@gmail.com"><img src={require('../img/email.png')} /></a></li>
+      <li class="trying"><a target = "_blank" href = "https://www.facebook.com/Hungryhitchhiker/?hc_ref=ARSARkj0iuYkY4JfVu3a2r4Y_bxgF08CAlmN9UK0EHFgsPHv-AdAjOkypeBXHU5oGoE"><img src="https://s3.ap-south-1.amazonaws.com/hungry-media/img/facebook.png" /></a></li>
+      <li><a target = "_blank" href = "https://www.instagram.com/hungryhitchhiker/"><img src="https://s3.ap-south-1.amazonaws.com/hungry-media/img/insta.png"/></a></li>
+      <li><a  href = "mailto:hungryhitchhiker@gmail.com"><img src="https://s3.ap-south-1.amazonaws.com/hungry-media/img/email.png" /></a></li>
       </ul>
       </p>    
     </div>
