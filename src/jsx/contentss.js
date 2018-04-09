@@ -72,7 +72,7 @@ componentWillUnmount() {
       var a = []
     var hungry_rides = this.state.hungry_rides || []
     hungry_rides.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
+      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :15, padding: 24 , margin: 30}}>
       <div className={"content-container" + index}> </div>
       </Card>
       )
@@ -99,7 +99,7 @@ componentWillUnmount() {
     var food_walks = this.state.food_walks || []
 
     food_walks.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
+      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :15, padding: 24 , margin: 30}}>
       <div className={"content-container" + index}> </div>
       </Card>
       )
@@ -112,7 +112,7 @@ componentWillUnmount() {
               maxHeight : 500
             });
       });
-      
+
       a.push(temp)
       })
   data = ( 	<div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center'}}>
@@ -147,7 +147,7 @@ componentWillUnmount() {
     var a = []
     var about = this.state.about || []
     about.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
+      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :15, padding: 24 , margin: 30}}>
       <p>{item.content}</p>
       </Card>
       )
