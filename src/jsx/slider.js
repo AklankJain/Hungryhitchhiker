@@ -9,7 +9,7 @@ class Slider extends React.Component {
   render(){
     return( 
 <div style={{ background: '#fff', padding: 24 }}>
-<Carousel afterChange={this.onChange}>
+<Carousel afterChange={this.onChange} autoplay>
     		<div><img src ="https://s3.ap-south-1.amazonaws.com/hungry-media/home-page-photos/18156636_10212870205168957_6670301087148277348_o.jpg"   width = "100%"/></div>
     		<div style={{ }}><img src ="https://s3.ap-south-1.amazonaws.com/hungry-media/home-page-photos/IMG_20171112_122857.jpg" height = "100%"  /></div>
     		<div><img src = "https://s3.ap-south-1.amazonaws.com/hungry-media/home-page-photos/IMG_20170713_170403.jpg"  height = "100%"/></div>

@@ -97,11 +97,22 @@ componentWillUnmount() {
   else if(thisDefault == "food_walks"){
     var a = []
     var food_walks = this.state.food_walks || []
+
     food_walks.forEach(function(item, index){
       var temp = (<Card id = "journal-title" title={item.title}  style={{ width: 1100 , fontSize :15, padding: 24 , margin: 30}}>
-      <p>{item.content}</p>
+      <div className={"content-container" + index}> </div>
       </Card>
       )
+
+      $( document ).ready(function() {
+          $('.content-container' + index).html(item.content)
+
+            jq('.content-container' + index).readmore({
+              speed : 5,
+              maxHeight : 500
+            });
+      });
+      
       a.push(temp)
       })
   data = ( 	<div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center'}}>
