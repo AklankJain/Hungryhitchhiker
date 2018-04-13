@@ -3,6 +3,7 @@ import React , {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import RichTextEditor from 'react-rte';
+import { Editor } from '@tinymce/tinymce-react';
 import './app.css'
 import axios from 'axios'
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete, Radio } from 'antd';
@@ -22,6 +23,8 @@ class RegistrationForm extends React.Component {
     value: RichTextEditor.createEmptyValue()
   }
 
+
+
   onChange = (value) => {
     this.setState({value});
     if (this.props.onChange) {
@@ -35,17 +38,41 @@ class RegistrationForm extends React.Component {
     }
   };
 
+  handleEditorChange = (e) => {
+    // console.log('Content was updated:', e.target.getContent());
+    ti = e.target.getContent()
+    console.log(ti)
+  }
+
+  handleDeleteSubmit = (e) => {
+    e.preventDefault();
+    this.props.form.validateFieldsAndScroll(['titled' , 'tagged'],(err, values) => {
+      if (!err) {
+        console.log('Received values of form: ', values);
+        axios.put('https://server-try.herokuapp.com/api/delete/', {titled: values.titled, tagged: values.tagged})
+        .then(response => {
+          console.log(response);
+          alert("Removed Successfully")
+            })
+          .catch(error => {
+             console.log(err);
+            });      
+      }
+    });
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.form.validateFieldsAndScroll((err, values) => {
+    this.props.form.validateFieldsAndScroll(['title' , 'tags' ] , (err, values) => {
       if (!err) {
         var key = values.title + values.tags
         console.log(key)
+        console.log(ti);
         console.log('Received values of form: ', values);
-        console.log(this.state.value.toString('html'));
-        axios.put('https://server-try.herokuapp.com/api/update', {title: values.title,content: this.state.value.toString('html'),tags: values.tags,key: key})
+        axios.put('https://server-try.herokuapp.com/api/update', {title: values.title,content: ti , tags: values.tags,key: key})
         .then(response => {
           console.log(response);
+          alert("Submitted")
             })
           .catch(error => {
              console.log(err);
@@ -85,9 +112,13 @@ class RegistrationForm extends React.Component {
 
     return (
       <div>
-       <RichTextEditor
-        value={this.state.value}
-        onChange={this.onChange}
+      <Editor
+        initialValue="<p>This is the initial content of the editor</p>"
+        init={{
+          plugins: 'link image code',
+          toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+        }}
+        onChange={this.handleEditorChange}
       />
       <Form onSubmit={this.handleSubmit}>
         <FormItem
@@ -102,18 +133,6 @@ class RegistrationForm extends React.Component {
             <Input />
           )}
         </FormItem>
-        <FormItem
-          {...formItemLayout}
-          label="Body"
-        >
-          {getFieldDecorator('content', {
-            rules: [{
-              required: true, message: 'Please input the content!',
-            }],
-          })(
-            <TextArea placeholder="Enter the content here" autosize={{ minRows: 4, maxRows: 60 }} />
-          )}
-        </FormItem>
          <FormItem
           {...formItemLayout}
           label="Tag"
@@ -125,7 +144,6 @@ class RegistrationForm extends React.Component {
             <RadioGroup>
               <RadioButton value="hungry_rides">Hungry Rides</RadioButton>
               <RadioButton value="food_walks">Hiker's Diary</RadioButton>
-              <RadioButton value="about">About</RadioButton>
             </RadioGroup>
           )}
         </FormItem>
@@ -133,6 +151,39 @@ class RegistrationForm extends React.Component {
           <Button type="primary" htmlType="submit">Submit</Button>
         </FormItem>
       </Form>
+
+      <h1> To remove a post, give it's title here. </h1>
+      <Form onSubmit={this.handleDeleteSubmit}>
+      <FormItem
+          {...formItemLayout}
+          label="Title"
+        >
+          {getFieldDecorator('titled', {
+            rules: [{
+              required: true, message: 'Please input the title',
+            }],
+          })(
+            <Input />
+          )}
+        </FormItem>
+        <FormItem
+          {...formItemLayout}
+          label="Tagged"
+        >
+          {getFieldDecorator('tagged' , {rules: [{
+              required: true, message: 'Please input the content!',
+            }],
+          })(
+            <RadioGroup>
+              <RadioButton value="hungry_rides">Hungry Rides</RadioButton>
+              <RadioButton value="food_walks">Hiker's Diary</RadioButton>
+            </RadioGroup>
+          )}
+        </FormItem>
+        <FormItem {...tailFormItemLayout}>
+          <Button type="primary" htmlType="submit">Submit</Button>
+        </FormItem>
+        </Form>
       </div>
     );
   }
