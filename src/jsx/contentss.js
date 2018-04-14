@@ -73,7 +73,7 @@ componentWillUnmount() {
     var hungry_rides = this.state.hungry_rides || []
     hungry_rides.reverse()
     hungry_rides.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'15px', padding: 24 , margin: 30}}>
+      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'17pt', padding: 24 , margin: 30, lineHeight:'140%'}}>
       <div className={"content-container" + index} style={{textAlign : 'left'}}> </div>
       </Card>
       )
@@ -88,9 +88,11 @@ componentWillUnmount() {
       });
   
       a.push(temp)
+      var fb = (<div class="fb-comments" data-href="http://www.hungryhitchhiker.com/" data-width="500" data-numposts="10"></div>)
+      a.push(fb)
       })
      data = (
-      <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center'}}> 
+      <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center' }}> 
         {a}
       </div>
       )
@@ -100,7 +102,7 @@ componentWillUnmount() {
     var food_walks = this.state.food_walks || []
     food_walks.reverse()
     food_walks.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :15, padding: 24 , margin: 30}}>
+      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'17pt', padding: 24 , margin: 30 , lineHeight:'140%'}}>
       <div className={"content-container" + index} style={{textAlign : 'left'}} > </div>
       </Card>
       )
@@ -124,7 +126,7 @@ componentWillUnmount() {
   else if(thisDefault == "contact"){
     console.log("In contact")
     data = (
-    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: 20}}>
+    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: '17pt'}}>
       <p>
       <img  id = "avatar" src= "https://s3.ap-south-1.amazonaws.com/hungry-media/img/vinayak.jpg" alt = "Avatar" height = "300px" width = "300px"/>
       </p>
@@ -148,20 +150,23 @@ componentWillUnmount() {
     var a = []
     var about = this.state.about || []
     about.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :15, padding: 24 , margin: 30}}>
+      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'17pt', padding: 24 , margin: 30}}>
       <p>{item.content}</p>
       </Card>
       )
       a.push(temp)
       })
-  data = (  <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center'}}>
+  data = (  
+  <div><div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center'}}>
        {a}
+       <div class="fb-comments" data-href="http://www.hungryhitchhiker.com/" data-width="500" data-numposts="10"></div>
       </div>
+    </div>
       )
   }
   else if(thisDefault == "home"){
     data = (
-    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: 20}}>
+    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'left', fontSize: '17pt'}}>
        <Slider />
        <br />
        <p>
@@ -169,8 +174,8 @@ componentWillUnmount() {
 Two years back, I started an unprecedented journey by stepping out from the world of engineering, to fulfill my passion and to justify that I am the maker of my own destiny.
 My destiny is still a work under progress though. :)
 </p>
-<p style={{textAlign : 'left' , fontSize : 18 , paddingLeft : 8}}>
-<b style = {{ fontSize : 20 , paddingLeft: 20}}>I am:</b>
+<p style={{textAlign : 'left' , fontSize : '17pt' , paddingLeft : 8}}>
+<b style = {{ fontSize : '20pt' , paddingLeft: 20}}>I am:</b>
 <ul>
 <li>A food explorer and an aspiring chef.</li>
 <li>I am on an adventurous and expeditious hitchhiking journey called life, to learn as much as I can, in order to educate myself with the voracious knowledge that the world has to provide. </li>
@@ -182,7 +187,7 @@ My destiny is still a work under progress though. :)
 <p>
 To all of you awesome people reading this, I hope you enjoy this journey with me as much as I have. :)
 </p>
-<p style= {{fontSize : 24}}>
+<p style= {{fontSize : 24 , textAlign: 'center'}}>
 <b>-<a href="https://www.facebook.com/vinayakagr" target = "_blank">Vinayak</a> aka 'HungryHitchhiker'</b>
 </p>
       </div>
@@ -191,7 +196,7 @@ To all of you awesome people reading this, I hope you enjoy this journey with me
   
   else if(thisDefault == "food_services"){
     data = (
-    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: 20}}>
+    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: '17pt'}}>
       <h1> Food Services </h1>
       <p>
       In case you haven't guessed it yet, my journey is not just about traveling but rather also about implementing the things I learn in my own hometown, Jaipur. 
@@ -209,12 +214,13 @@ To all of you awesome people reading this, I hope you enjoy this journey with me
 
 <p>
 Contact me at hungryhitchhiker@gmail.com for the latest update about the same.</p>
+
       </div>
     )
   }
   else if(thisDefault == "hungry_walks"){
     data = (
-    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: 20}}>
+    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: '17pt'}}>
       <h1> Hungry Walks </h1>
       <p>
       Do you share the same love for street food like me?
