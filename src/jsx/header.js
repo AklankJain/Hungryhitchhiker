@@ -43,14 +43,6 @@ class Head extends React.Component {
   }
   }
 
-  myFunction = () =>  {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "ant-menu-item") {
-        x.className += " responsive";
-    } else {
-        x.className = "ant-menu-item";
-    }
-  }
 
   render(){
     var temp = this.state.stateKeyValue

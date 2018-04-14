@@ -71,8 +71,9 @@ componentWillUnmount() {
   	if(thisDefault == "hungry_rides") {
       var a = []
     var hungry_rides = this.state.hungry_rides || []
+    hungry_rides.reverse()
     hungry_rides.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :15, padding: 24 , margin: 30}}>
+      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'15px', padding: 24 , margin: 30}}>
       <div className={"content-container" + index} style={{textAlign : 'left'}}> </div>
       </Card>
       )
@@ -97,7 +98,7 @@ componentWillUnmount() {
   else if(thisDefault == "food_walks"){
     var a = []
     var food_walks = this.state.food_walks || []
-
+    food_walks.reverse()
     food_walks.forEach(function(item, index){
       var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :15, padding: 24 , margin: 30}}>
       <div className={"content-container" + index} style={{textAlign : 'left'}} > </div>
