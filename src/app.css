@@ -140,3 +140,25 @@ h1 .coming-soon{
 	}
 
 
+.ant-layout-header {
+
+}
+
+
+.ant-menu-dark.ant-menu-horizontal .icon {
+  display: none;
+    
+}
+
+
+  
+@media screen and (max-width: 800px) {
+  .ant-menu-item {position: relative;}
+  
+  .ant-menu-item {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+

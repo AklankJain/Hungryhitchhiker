@@ -43,6 +43,15 @@ class Head extends React.Component {
   }
   }
 
+  myFunction = () =>  {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "ant-menu-item") {
+        x.className += " responsive";
+    } else {
+        x.className = "ant-menu-item";
+    }
+  }
+
   render(){
     var temp = this.state.stateKeyValue
     console.log(temp)
@@ -72,7 +81,6 @@ class Head extends React.Component {
        
         <Menu.Item key="contact"> Let's Connect </Menu.Item>
         <Menu.Item ><a href= "https://www.instagram.com/hungryhitchhiker/" >Gallery </a></Menu.Item>
-
       </Menu>
     </Header>
     <Cont key1={"hungry_rides"} url= 'https://server-try.herokuapp.com/api/update/'/>
@@ -151,12 +159,13 @@ class Head extends React.Component {
         mode="horizontal"
         defaultSelectedKeys={['5']}
         style={{ lineHeight: '64px', fontSize : 16 }}
-        onClick={ this.handleClick }>
+        onClick={ this.handleClick }
+         >
 
-        <Menu.Item key="home" style={{ background: '#fff' }}><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
-        <Menu.Item key="hungry_rides">Hungry Rides</Menu.Item>
-        <Menu.Item key="food_walks">Hiker's Diary</Menu.Item>
-        <Menu.Item key = "hungry_hometown">
+        <Menu.Item  key="home" style={{ background: '#fff' }}><img src = "https://100vampirenovels.com/files/15/47/34/f154734/public/sobo_9781101007105_oeb_011_r1.jpg" height="70px" width="70px" /></Menu.Item>
+        <Menu.Item  key="hungry_rides" >Hungry Rides</Menu.Item>
+        <Menu.Item  key="food_walks">Hiker's Diary</Menu.Item>
+        <Menu.Item  key = "hungry_hometown"   >
         <Dropdown overlay={menu}>
           <a className="ant-dropdown-link" href="#">
         Hungry @ Hometown <Icon type="down" />
@@ -165,7 +174,7 @@ class Head extends React.Component {
       </Menu.Item>
        <Menu.Item key="contact"> Let's Connect </Menu.Item>
          <Menu.Item ><a href= "https://www.instagram.com/hungryhitchhiker/" >Gallery </a></Menu.Item>
-
+        <Menu.Item><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></Menu.Item>
       </Menu>
     </Header>
     <Cont key1={"home"} url= 'https://server-try.herokuapp.com/api/update/'/>
