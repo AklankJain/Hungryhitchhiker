@@ -73,7 +73,7 @@ componentWillUnmount() {
     var hungry_rides = this.state.hungry_rides || []
     hungry_rides.forEach(function(item, index){
       var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :15, padding: 24 , margin: 30}}>
-      <div className={"content-container" + index}> </div>
+      <div className={"content-container" + index} style={{textAlign : 'left'}}> </div>
       </Card>
       )
 
@@ -100,7 +100,7 @@ componentWillUnmount() {
 
     food_walks.forEach(function(item, index){
       var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :15, padding: 24 , margin: 30}}>
-      <div className={"content-container" + index}> </div>
+      <div className={"content-container" + index} style={{textAlign : 'left'}} > </div>
       </Card>
       )
 
