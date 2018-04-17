@@ -8,7 +8,7 @@ import axios from 'axios'
 import $ from 'jquery';
 import 'readmore-js';
 import jq from 'readmore-js/node_modules/jquery';
-import FacebookProvider, { Comments } from 'react-facebook';
+
 
 
 
@@ -78,7 +78,6 @@ componentWillUnmount() {
       var temp = (<div><Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'14pt', padding: 24 , margin: 30, lineHeight:'140%'}}>
       <div className={"content-container" + index} style={{textAlign : 'left'}}> </div>
       </Card>
-      <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
       </div>
       )
 
@@ -163,7 +162,6 @@ componentWillUnmount() {
   data = (  
   <div><div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center'}}>
        {a}
-       <div class="fb-comments" data-href="http://www.hungryhitchhiker.com/" data-width="500" data-numposts="10"></div>
       </div>
     </div>
       )
