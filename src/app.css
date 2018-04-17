@@ -5,7 +5,10 @@ html {
 }
 
 
-
+.ant-layer-footer{
+	position: absolute;
+	bottom: 0;
+}
 .ant-carousel .slick-slide {
   text-align: center;
   height: 400px;
@@ -29,7 +32,7 @@ html {
 }
 
 .ant-card-head-title{
-	font-size: 30px !important;
+	font-size: 26pt !important;
 }
 
 

@@ -8,6 +8,7 @@ import axios from 'axios'
 import $ from 'jquery';
 import 'readmore-js';
 import jq from 'readmore-js/node_modules/jquery';
+import FacebookProvider, { Comments } from 'react-facebook';
 
 
 
@@ -24,6 +25,7 @@ class Cont extends React.Component {
   constructor(props) {
   	super(props);
   	thisDefault = this.props.key1
+    var flag = 0
   	// console.log('inside constructor')
   	// console.log('hello' + thisDefault)
    //  console.log( 'trying multiple props '+ this.props.url)
@@ -71,11 +73,13 @@ componentWillUnmount() {
   	if(thisDefault == "hungry_rides") {
       var a = []
     var hungry_rides = this.state.hungry_rides || []
-    hungry_rides.reverse()
+    hungry_rides.reverse() 
     hungry_rides.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'17pt', padding: 24 , margin: 30, lineHeight:'140%'}}>
+      var temp = (<div><Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'14pt', padding: 24 , margin: 30, lineHeight:'140%'}}>
       <div className={"content-container" + index} style={{textAlign : 'left'}}> </div>
       </Card>
+      <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+      </div>
       )
 
       $( document ).ready(function() {
@@ -86,10 +90,10 @@ componentWillUnmount() {
               maxHeight : 500
             });
       });
+
   
       a.push(temp)
-      var fb = (<div class="fb-comments" data-href="http://www.hungryhitchhiker.com/" data-width="500" data-numposts="10"></div>)
-      a.push(fb)
+          
       })
      data = (
       <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center' }}> 
@@ -102,7 +106,7 @@ componentWillUnmount() {
     var food_walks = this.state.food_walks || []
     food_walks.reverse()
     food_walks.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'17pt', padding: 24 , margin: 30 , lineHeight:'140%'}}>
+      var temp = (<Card loading id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'14pt', padding: 24 , margin: 30 , lineHeight:'140%'}}>
       <div className={"content-container" + index} style={{textAlign : 'left'}} > </div>
       </Card>
       )
@@ -150,7 +154,7 @@ componentWillUnmount() {
     var a = []
     var about = this.state.about || []
     about.forEach(function(item, index){
-      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'17pt', padding: 24 , margin: 30}}>
+      var temp = (<Card loading id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'17pt', padding: 24 , margin: 30}}>
       <p>{item.content}</p>
       </Card>
       )
@@ -190,7 +194,9 @@ To all of you awesome people reading this, I hope you enjoy this journey with me
 <p style= {{fontSize : 24 , textAlign: 'center'}}>
 <b>-<a href="https://www.facebook.com/vinayakagr" target = "_blank">Vinayak</a> aka 'HungryHitchhiker'</b>
 </p>
-      </div>
+ </div>
+
+
     )
   }
   
@@ -256,7 +262,7 @@ or just tasting the best street food of the city. The foodwalks that are being p
   }
     return( 
         <Content style={{ padding: '0 50px', background: 'white' }}>
-        	{data}
+          {data}
     </Content>
  
     )}}
