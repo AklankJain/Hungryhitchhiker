@@ -105,7 +105,7 @@ componentWillUnmount() {
     var food_walks = this.state.food_walks || []
     food_walks.reverse()
     food_walks.forEach(function(item, index){
-      var temp = (<Card loading id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'14pt', padding: 24 , margin: 30 , lineHeight:'140%'}}>
+      var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'14pt', padding: 24 , margin: 30 , lineHeight:'140%'}}>
       <div className={"content-container" + index} style={{textAlign : 'left'}} > </div>
       </Card>
       )
