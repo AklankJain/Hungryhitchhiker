@@ -163,28 +163,76 @@ else{
       </div>
       )
     }
-    else if(thisDefault == "food_walks"){
+    else if(thisDefault == "food_walks"){ 
+      console.log("[Foodwlkas it has entered here]")
+      yoyo = true
       var a = []
-      var food_walks = this.state.food_walks || []
+    var food_walks = this.state.food_walks || []
+    console.log(this)
+    var _this = this
+    console.log(this.props.match)
+    if(typeof(this.props.match) !== "undefined"){
+      console.log("[Content.js foodwalks before the start of for each]" + this.props.match);
+      const key_id = this.props.match.params.id
+      console.log("[Content.js foodwalks checking the value of the key_id]" + key_id)
       food_walks.forEach(function(item, index){
-        var temp = (<Card id = "journal-title" title={item.title}  style={{ width: '100%' , fontSize :'12pt', padding: 24 , margin: 30 , lineHeight:'140%'}}>
-        <div className={"content-container" + index} style={{textAlign : 'left'}} > </div>
-        </Card>
-        )
+        console.log("[Content.sj after the start of for each]")
+      if (item.key == key_id){
+      let keyValue = (item.key)
+      console.log( "[Content.js  foodwalks the keyvalue after matching] " + " " +  index +" " +keyValue )
+      let used_url = "/food_walks/" + keyValue;
+      var temp = (
+        <div>
+                {headerr}
+        <Card id = {keyValue} title={item.title} style={{ width: '100%' , fontSize :'12pt', padding: 24 , margin: 30, lineHeight:'140%'}}>
+      <div className={"content-container" + index} style={{textAlign : 'left'}}></div>
+      
+      </Card>
+      </div>
+      )
+      var attempt = item.content  
+      $( document ).ready(function() {
+          $('.content-container' + index).prepend(attempt)
+          $('.content-container' + index).append('<div class="fb-comments" data-href="http://hungryhitchhiker.com/" data-width="100%" data-numposts="2"></div>')
+            
+      });
 
-        $( document ).ready(function() {
-          $('.content-container' + index).html(item.content)
+  
+      a.push(temp)
+          
+      }
+    });
+  }
+    
+else{
+    food_walks.forEach(function(item, index){
+      let keyValue = (item.key)
+      console.log( "[Content.js the keyvalue] " + " " +  index +" " +keyValue )
+      let used_url = "/food_walks/" + keyValue;
+      var attempt = (item.content).slice(0,1000) + "..." 
+      var temp = (
+        <div>
+        <Card id = {keyValue} title={item.title} style={{ width: '100%' , fontSize :'12pt', padding: 24 , margin: 30, lineHeight:'140%'}}>
+      <div className={"content-container" + index} style={{textAlign : 'left'}}></div>
+      <Button onClick={_this.loadCommentsFromServer}><Link to ={used_url} >Read More</Link></Button>
+      </Card>
+      </div>
+      )
+       
+      $( document ).ready(function() {
+          $('.content-container' + index).html(attempt)
+          /*$('.content-container' + index).append('<div class="fb-comments" data-href="http://hungryhitchhiker.com/" data-width="100%" data-numposts="2"></div>')
+            */
+      });
 
-          jq('.content-container' + index).readmore({
-            speed : 5,
-            maxHeight : 500
-          });
-        });
-
-        a.push(temp)
+  
+      a.push(temp)
+          
       })
-      data = ( 	<div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center'}}>
-      {a}
+}
+     data = (
+      <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center' }}> 
+        {a}
       </div>
       )
     }
@@ -262,7 +310,7 @@ else{
 
 else if(thisDefault == "food_services"){
   data = (
-    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: '17pt'}}>
+    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: '14pt'}}>
     <h1> Food Services </h1>
     <p>
     In case you haven't guessed it yet, my journey is not just about traveling but rather also about implementing the things I learn in my own hometown, Jaipur. 
@@ -286,7 +334,7 @@ else if(thisDefault == "food_services"){
 }
 else if(thisDefault == "hungry_walks"){
   data = (
-    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: '17pt'}}>
+    <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'center', fontSize: '14pt'}}>
     <h1> Hungry Walks </h1>
     <p>
     Do you share the same love for street food like me?

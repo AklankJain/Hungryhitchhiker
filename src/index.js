@@ -35,6 +35,7 @@ ReactDOM.render(
         <Route exact path='/food_services' component={Head} /> 
         <Route exact path='/home' component={Head} /> 
         <Route path = '/hungry_rides/:id' component={Cont} /> 
+        <Route path = '/food_walks/:id' component={Cont} />
     	</div>
     </BrowserRouter>
 	, 
