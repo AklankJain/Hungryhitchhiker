@@ -131,7 +131,7 @@ class RegistrationForm extends React.Component {
 
   }
 
-  checking = (e) => {
+  check = (e) => {
     // console.log('Content was updated:', e.target.getContent());
     if(flag ==0){
     e.target.setContent(content_editor);
@@ -347,7 +347,8 @@ class RegistrationForm extends React.Component {
         '//www.tinymce.com/css/codepen.min.css'
        ]
             }}
-            onChange={this.checking}
+            onChange={this.check}
+
 
             // onClick={this.checking}
           />
