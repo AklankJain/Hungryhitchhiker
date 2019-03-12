@@ -120,6 +120,7 @@ router.route('/update')
 })
  }
 });
+    
 //Use our router configuration when we call /api
 app.use('/api', router);
 
