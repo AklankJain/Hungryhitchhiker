@@ -91,10 +91,10 @@ html {
 	color: grey;
 }
 
-/*.ant-dropdown-menu-item: hover,
+.ant-dropdown-menu-item:hover,
 .ant-dropdown-menu-item-active {
 	background-color: #444444;
-}*/
+}
 .ant-content-layout {
 	background-color: white !important;
 }
