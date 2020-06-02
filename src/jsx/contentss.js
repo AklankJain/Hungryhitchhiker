@@ -281,7 +281,9 @@ else{
       <div id = "journal" style={{ background: '#fff', padding: 24 , textAlign : 'left', fontSize: '14pt'}}>
       <Slider />
       <br />
-	  <span class="glf-button" data-glf-cuid="2d0caf06-1db0-4c4d-82b5-af1862685b03" data-glf-ruid="c147d89e-ecfa-44cd-aad6-20da4de885db" > See MENU & Order</span>
+	  <div style="text-align: center;">
+	  <span class="glf-button" data-glf-cuid="2d0caf06-1db0-4c4d-82b5-af1862685b03" data-glf-ruid="c147d89e-ecfa-44cd-aad6-20da4de885db" style='' > See MENU & Order</span>
+	  </div>	
 	  <p>
       Any man who can hitch the length and breadth of the galaxy, rough it, slum it, struggle against terrible odds and still know where his home is, he is clearly the man to be reckoned with.
       Two years back, I started an unprecedented journey by stepping out from the world of engineering, to fulfill my passion and to justify that I am the maker of my own destiny.
