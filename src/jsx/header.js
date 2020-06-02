@@ -91,6 +91,8 @@ class Head extends React.Component {
        
         <Menu.Item key="contact"><Link to = "/contact"> Let's Connect </Link></Menu.Item>
         <Menu.Item ><a href= "https://www.instagram.com/hungryhitchhiker/" >Gallery </a></Menu.Item>
+		<Menu.Item key="order"><span class="glf-button" data-glf-cuid="2d0caf06-1db0-4c4d-82b5-af1862685b03" data-glf-ruid="c147d89e-ecfa-44cd-aad6-20da4de885db" > See MENU & Order</span></Menu.Item>
+		
       </Menu>
     </Header>)
 
