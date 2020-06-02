@@ -283,7 +283,6 @@ else{
       <br />
 	  <!-- If you would like to customize the button, remove or change the "class" attribute inside the <span> tag -->
 	  <span class="glf-button" data-glf-cuid="2d0caf06-1db0-4c4d-82b5-af1862685b03" data-glf-ruid="c147d89e-ecfa-44cd-aad6-20da4de885db" > See MENU & Order</span>
-      <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async ></script>
 	  <p>
       Any man who can hitch the length and breadth of the galaxy, rough it, slum it, struggle against terrible odds and still know where his home is, he is clearly the man to be reckoned with.
       Two years back, I started an unprecedented journey by stepping out from the world of engineering, to fulfill my passion and to justify that I am the maker of my own destiny.
