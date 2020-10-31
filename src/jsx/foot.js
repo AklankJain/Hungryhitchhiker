@@ -12,7 +12,7 @@ class Foot extends React.Component {
     return( 
 
     <Footer style={{ textAlign: 'center' }}>
-      Hungry Hitchhiker ©2018 Created by Aklank Jain
+      Hungry Hitchhiker ©2020 Created by Aklank Jain
     </Footer>
 
     )
