@@ -17,9 +17,9 @@ const { Header, Content, Footer } = Layout;
       <div style={{ background: '#fff', padding: 24 }}>
       <Carousel afterChange={onChange}>
     	<div><img src = "https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg"  height = "460px" width = "1150px"/></div>
-    	<div><h3>2</h3></div>
-    	<div><h3>3</h3></div>
-    	<div><h3>4</h3></div>
+    	<div><h3>Second</h3></div>
+    	<div><h3>Third</h3></div>
+    	<div><h3>Fourth</h3></div>
   	</Carousel>
       </div>
       <div id = "journal" style={{ background: '#fff', padding: 24 }}>
