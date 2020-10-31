@@ -28,7 +28,7 @@ class Intro extends React.Component {
 // }
 
 <Card id = "journal-title" title="Hungry Rides" extra={<a href="#">More</a>} style={{ width: 1100 , fontSize :15}}>
-    	<p>	Join me as I travel the world in different ways hoping to learn different things through different experiences. Idea is to find different places with different ways of living and working, serving different kind of food to different kind of people. This also helps me in avoiding monotonousness to my fickle ever changing mind. Community living, working in cafe and connecting with roots are the three ways I am doing it at the moment.</p>
+    	<p>	Join me as I travel across the world in unqiue and different ways hoping to gain perspective through different experiences. The Idea behind this is to find different places with different ways of living and working, serving different kind of food to different kind of people. This also helps me in avoiding monotonousness to my fickle ever changing mind. Community living, working in cafe, making my own variety of food and connecting with roots are the three ways I am doing it at the moment.</p>
   		</Card>
 
   		)
