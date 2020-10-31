@@ -8,6 +8,7 @@ class Try extends React.Component {
   render(){
     return( 
     <h1> Hello My name is try </h1> 
+	<p> This page is not in use and  not be part of the official code.It was a test page to run and check if it works correctly </p>
     )
 }
 }
